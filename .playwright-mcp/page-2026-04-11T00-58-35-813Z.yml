@@ -1,0 +1,123 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - button "Collapse sidebar" [ref=e4]:
+        - img [ref=e5]
+      - generic [ref=e8]:
+        - img "Trident" [ref=e9]
+        - generic [ref=e10]: Trident
+      - link "New Chat" [ref=e12] [cursor=pointer]:
+        - /url: /chat
+        - img [ref=e13]
+        - generic [ref=e14]: New Chat
+      - navigation [ref=e15]:
+        - link "Dashboard" [ref=e16] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e17]
+          - generic [ref=e22]: Dashboard
+        - link "Journeys" [ref=e23] [cursor=pointer]:
+          - /url: /journeys
+          - img [ref=e24]
+          - generic [ref=e28]: Journeys
+        - link "Audience" [ref=e29] [cursor=pointer]:
+          - /url: /audience
+          - img [ref=e30]
+          - generic [ref=e35]: Audience
+        - link "Content" [ref=e36] [cursor=pointer]:
+          - /url: /content
+          - img [ref=e37]
+          - generic [ref=e40]: Content
+        - link "Data" [ref=e41] [cursor=pointer]:
+          - /url: /data
+          - img [ref=e42]
+          - generic [ref=e46]: Data
+      - generic [ref=e48]:
+        - generic [ref=e49]: Recent
+        - generic [ref=e50]:
+          - link "Generate a win-back email for customers who hav..." [ref=e51] [cursor=pointer]:
+            - /url: /chat?id=e7c5ccdf-3b3e-45f7-96a4-a93d0cd5b8a6
+            - img [ref=e52]
+            - generic [ref=e54]: Generate a win-back email for customers who hav...
+            - button "Delete conversation" [ref=e55]:
+              - img [ref=e56]
+          - link "Create a VIP segment" [ref=e59] [cursor=pointer]:
+            - /url: /chat?id=59acbef1-bd85-425c-badf-d7340008aeaa
+            - img [ref=e60]
+            - generic [ref=e62]: Create a VIP segment
+            - button "Delete conversation" [ref=e63]:
+              - img [ref=e64]
+          - link "New conversation" [ref=e67] [cursor=pointer]:
+            - /url: /chat?id=4ab8bfeb-4be4-47e1-9ff1-cfb84e74a26a
+            - img [ref=e68]
+            - generic [ref=e70]: New conversation
+            - button "Delete conversation" [ref=e71]:
+              - img [ref=e72]
+          - link "New conversation" [ref=e75] [cursor=pointer]:
+            - /url: /chat?id=e543862e-66b5-4e6d-9382-c6a4c7d21042
+            - img [ref=e76]
+            - generic [ref=e78]: New conversation
+            - button "Delete conversation" [ref=e79]:
+              - img [ref=e80]
+          - link "New conversation" [ref=e83] [cursor=pointer]:
+            - /url: /chat?id=28d80e0d-7838-472a-8c1e-5f376b1dc5db
+            - img [ref=e84]
+            - generic [ref=e86]: New conversation
+            - button "Delete conversation" [ref=e87]:
+              - img [ref=e88]
+      - button "D danhyunrha owner" [ref=e92]:
+        - generic [ref=e93]: D
+        - generic [ref=e94]:
+          - generic [ref=e95]: danhyunrha
+          - generic [ref=e96]: owner
+        - img [ref=e97]
+    - main [ref=e100]:
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - heading "Journeys" [level=1] [ref=e103]
+          - button "New Journey" [ref=e104]:
+            - img [ref=e105]
+            - text: New Journey
+        - generic [ref=e106]:
+          - button "All (2)" [ref=e107]
+          - button "Active (0)" [ref=e108]
+          - button "Paused (2)" [ref=e109]
+          - button "Draft (0)" [ref=e110]
+          - button "Archived (0)" [ref=e111]
+        - generic [ref=e112]:
+          - img [ref=e113]
+          - textbox "Search journeys..." [ref=e116]
+        - table [ref=e118]:
+          - rowgroup [ref=e119]:
+            - row "Name Status Enrolled Conversion Updated" [ref=e120]:
+              - columnheader "Name" [ref=e121]
+              - columnheader "Status" [ref=e122]
+              - columnheader "Enrolled" [ref=e123]
+              - columnheader "Conversion" [ref=e124]
+              - columnheader "Updated" [ref=e125]
+              - columnheader [ref=e126]
+          - rowgroup [ref=e127]:
+            - row "test Paused 3 100% 1m ago" [ref=e128] [cursor=pointer]:
+              - cell "test" [ref=e129]:
+                - paragraph [ref=e130]: test
+              - cell "Paused" [ref=e131]:
+                - generic [ref=e132]: Paused
+              - cell "3" [ref=e134]
+              - cell "100%" [ref=e135]
+              - cell "1m ago" [ref=e136]
+              - cell [ref=e137]:
+                - button [ref=e139]:
+                  - img [ref=e140]
+            - row "testde Paused 0 0% 1m ago" [ref=e144] [cursor=pointer]:
+              - cell "testde" [ref=e145]:
+                - paragraph [ref=e146]: testde
+              - cell "Paused" [ref=e147]:
+                - generic [ref=e148]: Paused
+              - cell "0" [ref=e150]
+              - cell "0%" [ref=e151]
+              - cell "1m ago" [ref=e152]
+              - cell [ref=e153]:
+                - button [ref=e155]:
+                  - img [ref=e156]
+        - paragraph [ref=e160]: Showing 2 of 2 journeys
+  - button "Open Next.js Dev Tools" [ref=e166] [cursor=pointer]:
+    - img [ref=e167]

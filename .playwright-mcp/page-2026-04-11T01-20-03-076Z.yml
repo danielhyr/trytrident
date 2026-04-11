@@ -1,0 +1,164 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - button "Collapse sidebar" [ref=e4]:
+        - img [ref=e5]
+      - generic [ref=e8]:
+        - img "Trident" [ref=e9]
+        - generic [ref=e10]: Trident
+      - link "New Chat" [ref=e12] [cursor=pointer]:
+        - /url: /chat
+        - img [ref=e13]
+        - generic [ref=e14]: New Chat
+      - navigation [ref=e15]:
+        - link "Dashboard" [ref=e16] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e17]
+          - generic [ref=e22]: Dashboard
+        - link "Journeys" [ref=e23] [cursor=pointer]:
+          - /url: /journeys
+          - img [ref=e24]
+          - generic [ref=e28]: Journeys
+        - link "Audience" [ref=e29] [cursor=pointer]:
+          - /url: /audience
+          - img [ref=e30]
+          - generic [ref=e35]: Audience
+        - link "Content" [ref=e36] [cursor=pointer]:
+          - /url: /content
+          - img [ref=e37]
+          - generic [ref=e40]: Content
+        - link "Data" [ref=e41] [cursor=pointer]:
+          - /url: /data
+          - img [ref=e42]
+          - generic [ref=e46]: Data
+      - generic [ref=e48]:
+        - generic [ref=e49]: Recent
+        - generic [ref=e50]:
+          - link "Generate a win-back email for customers who hav..." [ref=e51] [cursor=pointer]:
+            - /url: /chat?id=e7c5ccdf-3b3e-45f7-96a4-a93d0cd5b8a6
+            - img [ref=e52]
+            - generic [ref=e54]: Generate a win-back email for customers who hav...
+            - button "Delete conversation" [ref=e55]:
+              - img [ref=e56]
+          - link "Create a VIP segment" [ref=e59] [cursor=pointer]:
+            - /url: /chat?id=59acbef1-bd85-425c-badf-d7340008aeaa
+            - img [ref=e60]
+            - generic [ref=e62]: Create a VIP segment
+            - button "Delete conversation" [ref=e63]:
+              - img [ref=e64]
+          - link "New conversation" [ref=e67] [cursor=pointer]:
+            - /url: /chat?id=4ab8bfeb-4be4-47e1-9ff1-cfb84e74a26a
+            - img [ref=e68]
+            - generic [ref=e70]: New conversation
+            - button "Delete conversation" [ref=e71]:
+              - img [ref=e72]
+          - link "New conversation" [ref=e75] [cursor=pointer]:
+            - /url: /chat?id=e543862e-66b5-4e6d-9382-c6a4c7d21042
+            - img [ref=e76]
+            - generic [ref=e78]: New conversation
+            - button "Delete conversation" [ref=e79]:
+              - img [ref=e80]
+          - link "New conversation" [ref=e83] [cursor=pointer]:
+            - /url: /chat?id=28d80e0d-7838-472a-8c1e-5f376b1dc5db
+            - img [ref=e84]
+            - generic [ref=e86]: New conversation
+            - button "Delete conversation" [ref=e87]:
+              - img [ref=e88]
+      - button "D danhyunrha owner" [ref=e92]:
+        - generic [ref=e93]: D
+        - generic [ref=e94]:
+          - generic [ref=e95]: danhyunrha
+          - generic [ref=e96]: owner
+        - img [ref=e97]
+    - main [ref=e100]:
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - heading "Content" [level=1] [ref=e103]
+          - button "Create New" [ref=e105]:
+            - img [ref=e106]
+            - text: Create New
+            - img [ref=e107]
+        - generic [ref=e109]:
+          - button "All (4)" [ref=e110]
+          - button "Email (3)" [ref=e111]
+          - button "SMS (0)" [ref=e112]
+          - button "Push (0)" [ref=e113]
+          - button "Images (1)" [ref=e114]
+          - button "All Status" [ref=e116]
+          - button "Draft" [ref=e117]
+          - button "Active" [ref=e118]
+          - button "Archived" [ref=e119]
+        - generic [ref=e120]:
+          - img [ref=e121]
+          - textbox "Search templates..." [ref=e124]
+        - generic [ref=e125]:
+          - generic [ref=e126] [cursor=pointer]:
+            - generic [ref=e127]:
+              - generic [ref=e128]:
+                - img [ref=e130]
+                - generic [ref=e133]: Active
+              - generic [ref=e135]:
+                - button "Duplicate" [ref=e136]:
+                  - img [ref=e137]
+                - button "Archive" [ref=e140]:
+                  - img [ref=e141]
+                - button "Delete" [ref=e144]:
+                  - img [ref=e145]
+            - heading "Win-back Email - 60 Days Lapsed" [level=3] [ref=e148]
+            - paragraph [ref=e149]: "We Miss You, {{ contact.first_name | default: \"there\" }}! Here's a treat from {{ shop.name }}"
+            - generic [ref=e150]:
+              - generic [ref=e151]: 21m ago
+              - generic [ref=e152]: 5 vars
+          - generic [ref=e153] [cursor=pointer]:
+            - generic [ref=e154]:
+              - generic [ref=e155]:
+                - img [ref=e157]
+                - generic [ref=e160]: Active
+              - generic [ref=e162]:
+                - button "Duplicate" [ref=e163]:
+                  - img [ref=e164]
+                - button "Archive" [ref=e167]:
+                  - img [ref=e168]
+                - button "Delete" [ref=e171]:
+                  - img [ref=e172]
+            - heading "Untitled Email" [level=3] [ref=e175]
+            - paragraph [ref=e176]: "96 {{ shop.name }} Hi {{ contact.first_name | default: \"there\" }}, Your message goes here. Shop Now {{ shop.name }} · 123 Main St, Anytown, US 12345 Unsubscribe"
+            - generic [ref=e177]:
+              - generic [ref=e178]: 1h ago
+              - generic [ref=e179]: 2 vars
+          - generic [ref=e180] [cursor=pointer]:
+            - generic [ref=e181]:
+              - generic [ref=e182]:
+                - img [ref=e184]
+                - generic [ref=e187]: Draft
+              - generic [ref=e189]:
+                - button "Duplicate" [ref=e190]:
+                  - img [ref=e191]
+                - button "Archive" [ref=e194]:
+                  - img [ref=e195]
+                - button "Delete" [ref=e198]:
+                  - img [ref=e199]
+            - heading "Untitled Email" [level=3] [ref=e202]
+            - paragraph [ref=e203]: testtest
+            - generic [ref=e204]:
+              - generic [ref=e205]: 1h ago
+              - generic [ref=e206]: 2 vars
+          - generic [ref=e207]:
+            - img "ChatGPT Image Apr 10, 2026, 12_39_01 AM.png" [ref=e209]
+            - generic [ref=e210]:
+              - generic [ref=e211]:
+                - generic [ref=e212]:
+                  - img [ref=e213]
+                  - generic [ref=e217]: Image
+                - generic [ref=e218]:
+                  - button "Copy URL" [ref=e219]:
+                    - img [ref=e220]
+                  - button "Delete" [ref=e223]:
+                    - img [ref=e224]
+              - heading "ChatGPT Image Apr 10, 2026, 12_39_01 AM.png" [level=3] [ref=e227]
+              - generic [ref=e228]:
+                - generic [ref=e229]: 4h ago
+                - generic [ref=e230]: 1.4 MB
+        - paragraph [ref=e231]: Showing 3 of 3 templates
+  - button "Open Next.js Dev Tools" [ref=e237] [cursor=pointer]:
+    - img [ref=e238]
