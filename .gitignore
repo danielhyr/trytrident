@@ -1,0 +1,26 @@
+# SSH keys
+sshkey
+sshkey.pub
+
+# Playwright MCP artifacts
+.playwright-mcp/
+
+# Dependencies
+node_modules/
+app/node_modules/
+
+# Next.js
+app/.next/
+app/out/
+
+# Build
+.next/
+out/
+
+# Env
+.env
+.env.local
+.env*.local
+
+# OS
+.DS_Store

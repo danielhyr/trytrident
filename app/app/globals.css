@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Colors — dark shell (sidebar, topbar) */
+  --color-bg: #0F172A;
+  --color-bg-sidebar: #0B1120;
+  --color-surface: #1E293B;
+  --color-border: #334155;
+  --color-accent: #0ACDBC;
+  --color-accent-muted: oklch(from #0ACDBC l c h / 10%);
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  --color-success: #10B981;
+  --color-text: #F1F5F9;
+  --color-text-muted: #94A3B8;
+
+  /* Fonts */
+  --font-headline: var(--font-sora);
+  --font-body: var(--font-dm-sans);
+  --font-data: var(--font-ibm-plex-mono);
+
+  /* Main content area — light theme */
+  --color-bg-main: #EAECF2;
+  --color-text-main: #1A2233;
+  --color-text-main-muted: #64748B;
+
+  /* Light theme component tokens (used in chat area) */
+  --color-card: #FAFBFD;
+  --color-card-border: #DDE2EB;
+  --color-card-border-focus: #0ACDBC;
+  --color-input-bg: #FFFFFF;
+  --color-user-bubble: #E8F8F7;
+  --color-user-bubble-border: #b3ece8;
+  --color-tool-bg: #F1F4F9;
+  --color-tool-border: #CBD5E1;
+
+  /* Radii */
+  --radius-card: 10px;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Main content area */
+.bg-dot-grid {
+  position: relative;
+  background-color: var(--color-bg-main);
+  background-image: radial-gradient(circle, #C2C8D6 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Spotlight layer — dots near cursor become teal ring outlines */
+/* mask-image is set inline via JS since CSS vars don't work inside mask */
+.dot-grid-spotlight {
+  background-image: radial-gradient(
+    circle,
+    transparent 0.5px,
+    rgba(10, 205, 188, 0.4) 0.5px,
+    rgba(10, 205, 188, 0.4) 1.5px,
+    transparent 1.5px
+  );
+  background-size: 24px 24px;
+  transition: opacity 0.35s ease;
+}
+
+/* Card elevation — all white cards in the light main area get a subtle shadow + border */
+main.bg-dot-grid .rounded-\[--radius-card\] {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.04);
+  border: 1px solid var(--color-card-border);
+}
+
+/* React Flow controls — override default grey with black */
+.react-flow__controls-button {
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+.react-flow__controls-button svg {
+  fill: #0f172a !important;
+}
+.react-flow__controls-button:hover {
+  background: #f1f5f9 !important;
+}
