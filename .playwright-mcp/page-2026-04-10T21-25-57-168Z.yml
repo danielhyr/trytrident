@@ -1,0 +1,92 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - button "Collapse sidebar" [ref=e4]:
+        - img [ref=e5]
+      - generic [ref=e8]:
+        - img "Trident" [ref=e9]
+        - generic [ref=e10]: Trident
+      - link "New Chat" [ref=e12] [cursor=pointer]:
+        - /url: /chat
+        - img [ref=e13]
+        - generic [ref=e14]: New Chat
+      - navigation [ref=e15]:
+        - link "Dashboard" [ref=e16] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e17]
+          - generic [ref=e22]: Dashboard
+        - link "Journeys" [ref=e23] [cursor=pointer]:
+          - /url: /journeys
+          - img [ref=e24]
+          - generic [ref=e28]: Journeys
+        - link "Audience" [ref=e29] [cursor=pointer]:
+          - /url: /audience
+          - img [ref=e30]
+          - generic [ref=e35]: Audience
+        - link "Content" [ref=e36] [cursor=pointer]:
+          - /url: /content
+          - img [ref=e37]
+          - generic [ref=e40]: Content
+        - link "Data" [ref=e41] [cursor=pointer]:
+          - /url: /data
+          - img [ref=e42]
+          - generic [ref=e46]: Data
+      - generic [ref=e48]:
+        - generic [ref=e49]: Recent
+        - generic [ref=e50]:
+          - link "Create a VIP segment" [ref=e51] [cursor=pointer]:
+            - /url: /chat?id=59acbef1-bd85-425c-badf-d7340008aeaa
+            - img [ref=e52]
+            - generic [ref=e54]: Create a VIP segment
+            - button "Delete conversation" [ref=e55]:
+              - img [ref=e56]
+          - link "New conversation" [ref=e59] [cursor=pointer]:
+            - /url: /chat?id=4ab8bfeb-4be4-47e1-9ff1-cfb84e74a26a
+            - img [ref=e60]
+            - generic [ref=e62]: New conversation
+            - button "Delete conversation" [ref=e63]:
+              - img [ref=e64]
+          - link "New conversation" [ref=e67] [cursor=pointer]:
+            - /url: /chat?id=e543862e-66b5-4e6d-9382-c6a4c7d21042
+            - img [ref=e68]
+            - generic [ref=e70]: New conversation
+            - button "Delete conversation" [ref=e71]:
+              - img [ref=e72]
+          - link "New conversation" [ref=e75] [cursor=pointer]:
+            - /url: /chat?id=28d80e0d-7838-472a-8c1e-5f376b1dc5db
+            - img [ref=e76]
+            - generic [ref=e78]: New conversation
+            - button "Delete conversation" [ref=e79]:
+              - img [ref=e80]
+      - button "D danhyunrha owner" [ref=e84]:
+        - generic [ref=e85]: D
+        - generic [ref=e86]:
+          - generic [ref=e87]: danhyunrha
+          - generic [ref=e88]: owner
+        - img [ref=e89]
+    - generic [ref=e91]:
+      - banner [ref=e92]:
+        - generic [ref=e93]: Daniel's Workspace!!
+      - main [ref=e94]:
+        - generic [ref=e95]:
+          - generic [ref=e97]:
+            - generic [ref=e124]:
+              - img [ref=e126]
+              - generic [ref=e131]: Create a VIP segment
+            - generic [ref=e132]:
+              - img [ref=e134]
+              - generic [ref=e139]: "The segment \"VIP Customers\" has been created. It includes all contacts with a lifecycle stage of \"vip\". Next steps: * View the contacts in this segment * Create another segment"
+            - generic [ref=e140]:
+              - img [ref=e142]
+              - generic [ref=e145]:
+                - generic [ref=e146]:
+                  - img [ref=e147]
+                  - generic [ref=e149]: generateContent — done
+                - generic [ref=e151]: "I generated a win-back email for customers who haven't ordered in 60 days. **Subject:** We Miss You, {{ contact.first_name | default: \"there\" }}! Here's a treat from {{ shop.name }} **Body:** Hi {{ contact.first_name | default: \"there\" }}, It's been a little while since we last saw you at {{ shop.name }}, and we've missed you! We hope you're doing great. As a valued customer, we truly appreciate your past support. You've placed {{ contact.order_count }} orders with us, and we'd love to welcome you back. To show our appreciation, we're giving you an exclusive {{ campaign.discount_percent }}% discount on your next purchase! Use code {{ campaign.coupon_code }} at checkout to claim your offer. It's the perfect opportunity to rediscover your favorites or explore something new. Click here to start shopping: {{ shop.url }} We can't wait to see you back! The Team at {{ shop.name }} You can edit this template in the Content Studio at /content."
+          - generic [ref=e109]:
+            - textbox "Message Trident..." [ref=e110]
+            - button [disabled] [ref=e111]:
+              - img [ref=e112]
+  - button "Open Next.js Dev Tools" [ref=e119] [cursor=pointer]:
+    - img [ref=e120]
+  - alert [ref=e123]

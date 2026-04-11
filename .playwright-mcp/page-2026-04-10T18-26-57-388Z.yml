@@ -1,0 +1,57 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - button "Collapse sidebar" [ref=e4]:
+        - img [ref=e5]
+      - generic [ref=e8]:
+        - img "Trident" [ref=e9]
+        - generic [ref=e10]: Trident
+      - link "New Chat" [ref=e12] [cursor=pointer]:
+        - /url: /chat
+        - img [ref=e13]
+        - generic [ref=e14]: New Chat
+      - navigation [ref=e15]:
+        - link "Dashboard" [ref=e16] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e17]
+          - generic [ref=e22]: Dashboard
+        - link "Journeys" [ref=e23] [cursor=pointer]:
+          - /url: /journeys
+          - img [ref=e24]
+          - generic [ref=e28]: Journeys
+        - link "Audience" [ref=e29] [cursor=pointer]:
+          - /url: /audience
+          - img [ref=e30]
+          - generic [ref=e35]: Audience
+        - link "Content" [ref=e36] [cursor=pointer]:
+          - /url: /content
+          - img [ref=e37]
+          - generic [ref=e40]: Content
+        - link "Data" [ref=e41] [cursor=pointer]:
+          - /url: /data
+          - img [ref=e42]
+          - generic [ref=e46]: Data
+      - generic [ref=e48]:
+        - generic [ref=e49]: Recent
+        - paragraph [ref=e51]: No conversations yet
+      - button "D danhyunrha owner" [ref=e53]:
+        - generic [ref=e54]: D
+        - generic [ref=e55]:
+          - generic [ref=e56]: danhyunrha
+          - generic [ref=e57]: owner
+        - img [ref=e58]
+    - generic [ref=e60]:
+      - banner [ref=e61]:
+        - generic [ref=e62]: Daniel's Workspace!!
+      - main [ref=e63]:
+        - generic [ref=e64]:
+          - generic [ref=e92]:
+            - img [ref=e94]
+            - generic [ref=e99]: How many contacts do I have?
+          - generic [ref=e77]:
+            - textbox "Message Trident..." [ref=e78]
+            - button [disabled] [ref=e79]:
+              - img [ref=e80]
+  - button "Open Next.js Dev Tools" [ref=e87] [cursor=pointer]:
+    - img [ref=e88]
+  - alert [ref=e91]

@@ -1,0 +1,121 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - button "Collapse sidebar" [ref=e4]:
+        - img [ref=e5]
+      - generic [ref=e8]:
+        - img "Trident" [ref=e9]
+        - generic [ref=e10]: Trident
+      - link "New Chat" [ref=e12] [cursor=pointer]:
+        - /url: /chat
+        - img [ref=e13]
+        - generic [ref=e14]: New Chat
+      - navigation [ref=e15]:
+        - link "Dashboard" [ref=e16] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e17]
+          - generic [ref=e22]: Dashboard
+        - link "Journeys" [ref=e23] [cursor=pointer]:
+          - /url: /journeys
+          - img [ref=e24]
+          - generic [ref=e28]: Journeys
+        - link "Audience" [ref=e29] [cursor=pointer]:
+          - /url: /audience
+          - img [ref=e30]
+          - generic [ref=e35]: Audience
+        - link "Content" [ref=e36] [cursor=pointer]:
+          - /url: /content
+          - img [ref=e37]
+          - generic [ref=e40]: Content
+        - link "Data" [ref=e41] [cursor=pointer]:
+          - /url: /data
+          - img [ref=e42]
+          - generic [ref=e46]: Data
+      - generic [ref=e48]:
+        - generic [ref=e49]: Recent
+        - generic [ref=e50]:
+          - link "Create a VIP segment" [ref=e51] [cursor=pointer]:
+            - /url: /chat?id=59acbef1-bd85-425c-badf-d7340008aeaa
+            - img [ref=e52]
+            - generic [ref=e54]: Create a VIP segment
+            - button "Delete conversation" [ref=e55]:
+              - img [ref=e56]
+          - link "New conversation" [ref=e59] [cursor=pointer]:
+            - /url: /chat?id=4ab8bfeb-4be4-47e1-9ff1-cfb84e74a26a
+            - img [ref=e60]
+            - generic [ref=e62]: New conversation
+            - button "Delete conversation" [ref=e63]:
+              - img [ref=e64]
+          - link "New conversation" [ref=e67] [cursor=pointer]:
+            - /url: /chat?id=e543862e-66b5-4e6d-9382-c6a4c7d21042
+            - img [ref=e68]
+            - generic [ref=e70]: New conversation
+            - button "Delete conversation" [ref=e71]:
+              - img [ref=e72]
+          - link "New conversation" [ref=e75] [cursor=pointer]:
+            - /url: /chat?id=28d80e0d-7838-472a-8c1e-5f376b1dc5db
+            - img [ref=e76]
+            - generic [ref=e78]: New conversation
+            - button "Delete conversation" [ref=e79]:
+              - img [ref=e80]
+      - button "D danhyunrha owner" [ref=e84]:
+        - generic [ref=e85]: D
+        - generic [ref=e86]:
+          - generic [ref=e87]: danhyunrha
+          - generic [ref=e88]: owner
+        - img [ref=e89]
+    - generic [ref=e91]:
+      - banner [ref=e92]:
+        - generic [ref=e93]: Daniel's Workspace!!
+      - main [ref=e94]:
+        - generic [ref=e257]:
+          - generic [ref=e258]:
+            - generic [ref=e259]:
+              - button [ref=e260]:
+                - img [ref=e261]
+              - img [ref=e264]
+              - button "Win-back Email - 60 Days Lapsed" [ref=e267]
+            - button "Save" [ref=e268]:
+              - img [ref=e269]
+              - text: Save
+          - generic [ref=e273]:
+            - generic [ref=e274]:
+              - generic [ref=e275]: "Subject:"
+              - textbox "Email subject line..." [ref=e276]: "We Miss You, {{ contact.first_name | default: \"there\" }}! Here's a treat from {{ shop.name }}"
+            - generic [ref=e277]:
+              - generic [ref=e278]: "Preheader:"
+              - textbox "Preview text..." [ref=e279]: "It's been a while, and we'd love to see you back. Enjoy {{ campaign.discount_percent }}% off your next purchase!"
+          - generic [ref=e280]:
+            - generic [ref=e281]:
+              - generic [ref=e282]:
+                - generic [ref=e283]:
+                  - generic [ref=e284]: MJML
+                  - button "Insert Block" [ref=e286]:
+                    - img [ref=e287]
+                    - text: Insert Block
+                    - img [ref=e290]
+                - button "Variables" [ref=e292]:
+                  - img [ref=e293]
+                  - text: Variables
+              - textbox [ref=e296]: "<mjml> <mj-body background-color=\"#f4f4f4\"> <mj-section background-color=\"#ffffff\" padding=\"20px 0\"> <mj-column> <mj-text align=\"center\" font-size=\"24px\" font-weight=\"bold\" color=\"#1E293B\"> {{ shop.name }} </mj-text> </mj-column> </mj-section> <mj-section background-color=\"#ffffff\"> <mj-column> <mj-text font-size=\"16px\" color=\"#374151\" line-height=\"1.6\"> Hi {{ contact.first_name | default: \"there\" }}, It's been a little while since we last saw you at {{ shop.name }}, and we've missed you! We hope you're doing great. As a valued customer, we truly appreciate your past support. You've placed {{ contact.order_count }} orders with us, and we'd love to welcome you back. To show our appreciation, we're giving you an exclusive {{ campaign.discount_percent }}% discount on your next purchase! Use code {{ campaign.coupon_code }} at checkout to claim your offer. It's the perfect opportunity to rediscover your favorites or explore something new. Click here to start shopping: {{ shop.url }} We can't wait to see you back! The Team at {{ shop.name }} </mj-text> </mj-column> </mj-section> <mj-section background-color=\"#ffffff\"> <mj-column> <mj-button background-color=\"#0ACDBC\" color=\"#ffffff\" font-size=\"16px\" border-radius=\"6px\" href=\"{{ shop.url }}\"> Shop Now </mj-button> </mj-column> </mj-section> <mj-section background-color=\"#f8fafc\" padding=\"20px 0\"> <mj-column> <mj-text align=\"center\" font-size=\"12px\" color=\"#94A3B8\"> {{ shop.name }} · 123 Main St, Anytown, US 12345 </mj-text> <mj-text align=\"center\" font-size=\"12px\" color=\"#94A3B8\"> <a href=\"#\" style=\"color: #64748B;\">Unsubscribe</a> </mj-text> </mj-column> </mj-section> </mj-body> </mjml>"
+            - generic [ref=e297]:
+              - generic [ref=e298]:
+                - generic [ref=e299]: Preview
+                - generic [ref=e300]:
+                  - button [ref=e301]:
+                    - img [ref=e302]
+                  - button [ref=e304]:
+                    - img [ref=e305]
+              - iframe [ref=e309]:
+                - article [ref=f1e2]:
+                  - generic [ref=f1e5]: Paws & Claws
+                  - generic [ref=f1e8]: "Hi Sarah, It's been a little while since we last saw you at Paws & Claws, and we've missed you! We hope you're doing great. As a valued customer, we truly appreciate your past support. You've placed 4 orders with us, and we'd love to welcome you back. To show our appreciation, we're giving you an exclusive 15% discount on your next purchase! Use code WELCOME15 at checkout to claim your offer. It's the perfect opportunity to rediscover your favorites or explore something new. Click here to start shopping: https://pawsandclaws.com We can't wait to see you back! The Team at Paws & Claws"
+                  - link "Shop Now" [ref=f1e11] [cursor=pointer]:
+                    - /url: https://pawsandclaws.com
+                  - generic [ref=f1e13]:
+                    - generic [ref=f1e14]: Paws & Claws · 123 Main St, Anytown, US 12345
+                    - link "Unsubscribe" [ref=f1e16] [cursor=pointer]:
+                      - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e119] [cursor=pointer]:
+    - img [ref=e120]
+  - alert [ref=e123]
