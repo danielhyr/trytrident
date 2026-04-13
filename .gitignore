@@ -17,10 +17,30 @@ app/out/
 .next/
 out/
 
-# Env
+# Env files (real secrets live here)
 .env
 .env.local
 .env*.local
+app/.env
+app/.env.local
+app/.env*.local
 
 # OS
 .DS_Store
+**/.DS_Store
+
+# TypeScript build info
+*.tsbuildinfo
+app/tsconfig.tsbuildinfo
+
+# Screenshots and dev reference images
+screenshot_*.png
+ai-email-*.png
+content-library-*.png
+
+# Scratch / dev notes
+login.md
+
+# Claude Code local settings (not for sharing)
+.claude/settings.local.json
+app/.claude/

@@ -2,7 +2,7 @@
 
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useState, useEffect, useRef, useCallback, useMemo, Suspense } from "react";
 import { MessageBubble } from "@/components/chat/message-bubble";
 import { ChatInput } from "@/components/chat/chat-input";
@@ -11,7 +11,6 @@ import type { UIMessage } from "ai";
 
 function ChatPageInner() {
   const searchParams = useSearchParams();
-  const router = useRouter();
   const scrollRef = useRef<HTMLDivElement>(null);
   const [conversationId, setConversationId] = useState<string | undefined>(
     searchParams.get("id") ?? undefined
@@ -20,27 +19,23 @@ function ChatPageInner() {
   const [loadingHistory, setLoadingHistory] = useState(false);
   const [input, setInput] = useState("");
 
-  // Load existing conversation messages
+  // Load existing conversation messages when user navigates to a saved conversation.
   useEffect(() => {
     const id = searchParams.get("id");
-    if (id && id !== conversationId) {
-      setConversationId(id);
-    }
-    if (id) {
-      setLoadingHistory(true);
-      fetch(`/api/chat/messages?id=${id}`)
-        .then((res) => res.json())
-        .then((msgs: UIMessage[]) => {
-          setInitialMessages(msgs);
-        })
-        .catch(() => {
-          setInitialMessages([]);
-        })
-        .finally(() => setLoadingHistory(false));
-    } else {
+
+    if (!id) {
       setConversationId(undefined);
       setInitialMessages([]);
+      return;
     }
+
+    setConversationId(id);
+    setLoadingHistory(true);
+    fetch(`/api/chat/messages?id=${id}`)
+      .then((res) => res.json())
+      .then((msgs: UIMessage[]) => setInitialMessages(msgs))
+      .catch(() => setInitialMessages([]))
+      .finally(() => setLoadingHistory(false));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
@@ -55,18 +50,16 @@ function ChatPageInner() {
   const { messages, sendMessage, setMessages, status } = useChat({
     transport,
     messages: initialMessages,
-    onFinish: () => {
-      // Refresh sidebar conversations by triggering a fetch
-      // (layout will re-render on next navigation)
-    },
+    onFinish: () => {},
   });
 
-  // Sync initialMessages into useChat when loading a conversation
+  // Sync DB-loaded messages into useChat when navigating to a saved conversation
   useEffect(() => {
     if (initialMessages.length > 0) {
       setMessages(initialMessages);
     }
-  }, [initialMessages, setMessages]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialMessages]);
 
   const isLoading = status === "submitted" || status === "streaming";
 
@@ -102,18 +95,17 @@ function ChatPageInner() {
     [sendMessage, conversationId]
   );
 
-  // Read X-Conversation-Id from response headers
-  // Since the new transport doesn't expose onResponse, we poll the URL
+  // After first exchange on a new chat, fetch the conversation id from the server
+  // so subsequent sends include it. Do NOT update the URL here — any URL change
+  // (even replaceState) causes useSearchParams to re-fire, which re-fetches history
+  // and clobbers the live useChat messages.
   useEffect(() => {
     if (messages.length > 0 && !conversationId) {
-      // After first message exchange, fetch conversations to get the ID
       fetch("/api/chat/conversations")
         .then((res) => res.json())
         .then((convos: Array<{ id: string }>) => {
           if (convos.length > 0 && !conversationId) {
-            const newId = convos[0].id;
-            setConversationId(newId);
-            router.replace(`/chat?id=${newId}`, { scroll: false });
+            setConversationId(convos[0].id);
           }
         })
         .catch(() => {});

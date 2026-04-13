@@ -94,7 +94,7 @@ export function ApiKeyManager({ initialKeys }: Props) {
           value={label}
           onChange={(e) => setLabel(e.target.value)}
           placeholder="Key label (optional)"
-          className="flex-1 rounded-md border border-border bg-bg px-3 py-2 text-sm text-text-main placeholder:text-text-main-muted focus:outline-none focus:ring-1 focus:ring-accent"
+          className="flex-1 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-text-main placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-accent"
         />
         <button
           onClick={handleCreate}
@@ -116,12 +116,12 @@ export function ApiKeyManager({ initialKeys }: Props) {
             Copy this key now — it will not be shown again.
           </p>
           <div className="flex items-center gap-2">
-            <code className="flex-1 truncate rounded bg-bg px-3 py-2 font-data text-xs text-text-main">
+            <code className="flex-1 truncate rounded border border-gray-200 bg-gray-50 px-3 py-2 font-data text-xs text-text-main">
               {newKey}
             </code>
             <button
               onClick={() => handleCopy(newKey)}
-              className="shrink-0 rounded-md border border-border px-3 py-2 text-xs text-text-main hover:bg-surface transition-colors"
+              className="shrink-0 rounded-md border border-gray-300 bg-white px-3 py-2 text-xs text-text-main hover:bg-gray-50 transition-colors"
             >
               {copied ? "Copied!" : "Copy"}
             </button>
@@ -137,10 +137,10 @@ export function ApiKeyManager({ initialKeys }: Props) {
 
       {/* Key table */}
       {keys.length > 0 && (
-        <div className="rounded-lg border border-border overflow-hidden">
+        <div className="rounded-lg border border-gray-200 overflow-hidden">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-border bg-surface/50">
+              <tr className="border-b border-gray-200 bg-gray-50">
                 <th className="px-4 py-2 text-left font-medium text-text-main-muted">Prefix</th>
                 <th className="px-4 py-2 text-left font-medium text-text-main-muted">Label</th>
                 <th className="px-4 py-2 text-left font-medium text-text-main-muted">Created</th>
@@ -151,7 +151,7 @@ export function ApiKeyManager({ initialKeys }: Props) {
             </thead>
             <tbody>
               {keys.map((key) => (
-                <tr key={key.id} className="border-b border-border last:border-0">
+                <tr key={key.id} className="border-b border-gray-100 last:border-0">
                   <td className="px-4 py-3 font-data text-xs text-text-main">
                     {key.key_prefix}…
                   </td>
@@ -205,12 +205,12 @@ export function ApiKeyManager({ initialKeys }: Props) {
           Ingest endpoint
         </p>
         <div className="flex items-center gap-2">
-          <code className="flex-1 truncate rounded bg-bg px-3 py-2 font-data text-xs text-text-main border border-border">
+          <code className="flex-1 truncate rounded border border-gray-200 bg-gray-50 px-3 py-2 font-data text-xs text-text-main">
             POST {ingestUrl}
           </code>
           <button
             onClick={() => handleCopy(`POST ${ingestUrl}`)}
-            className="shrink-0 rounded-md border border-border px-3 py-2 text-xs text-text-main hover:bg-surface transition-colors"
+            className="shrink-0 rounded-md border border-gray-300 bg-white px-3 py-2 text-xs text-text-main hover:bg-gray-50 transition-colors"
           >
             Copy
           </button>
@@ -220,12 +220,12 @@ export function ApiKeyManager({ initialKeys }: Props) {
           Example request
         </p>
         <div className="relative">
-          <pre className="overflow-x-auto rounded bg-bg border border-border px-3 py-3 font-data text-xs text-text-main leading-relaxed">
+          <pre className="overflow-x-auto rounded border border-gray-200 bg-gray-50 px-3 py-3 font-data text-xs text-text-main leading-relaxed">
             {curlExample}
           </pre>
           <button
             onClick={() => handleCopy(curlExample)}
-            className="absolute right-2 top-2 rounded border border-border bg-surface px-2 py-1 text-xs text-text-main-muted hover:text-text-main transition-colors"
+            className="absolute right-2 top-2 rounded border border-gray-200 bg-white px-2 py-1 text-xs text-text-main-muted hover:text-text-main transition-colors"
           >
             Copy
           </button>
